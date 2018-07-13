@@ -1,16 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 
+import { Product } from '../../models/product';
+
 @Component({
   selector: 'app-product-list',
   template: `
-    <p>
-      product-list works!
-    </p>
+    {{products | json }}
   `,
   styles: []
 })
 export class ProductListComponent implements OnInit {
-
+  public products: Product[] = []
   constructor() { }
 
   ngOnInit() {
