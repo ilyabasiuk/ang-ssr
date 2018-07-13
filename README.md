@@ -2,6 +2,22 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
 
+npm install -g @angular/cli@latest
+
+ng new store --routing style scss
+
+ng config schematics.@schematics/angular.component.inlineStyle true
+
+ng config schematics.@schematics/angular.component.inlineTemplate true
+
+ng generate module ui --module app
+
+ng generate component ui/containers/layout
+
+ng generate component ui/containers/header
+
+ ng generate component ui/containers/footer
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
