@@ -16,7 +16,11 @@ ng generate component ui/containers/layout
 
 ng generate component ui/containers/header
 
- ng generate component ui/containers/footer
+ng generate component ui/containers/footer
+
+ng g m product --routing
+
+ng g cl product/models/product
 
 ## Development server
 
