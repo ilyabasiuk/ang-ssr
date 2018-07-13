@@ -25,6 +25,8 @@ ng g cl product/models/product
 ng g c product/containers/product-list
 ng g c product/containers/product-details
 
+ng g s product/services/product
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
