@@ -10,6 +10,13 @@ import { Component, OnInit } from '@angular/core';
       </a>
       <div class="collapse navbar-collapse">
         <div class="navbar-nav">
+          <a *ngFor="let link of links"
+            [routerLink]="link.url" 
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }"
+            class="nav-item nav-link" > 
+            {{link.label}}
+          </a>
         </div>
       </div> 
     </nav>
@@ -20,7 +27,7 @@ export class HeaderComponent implements OnInit {
   public logo = 'assets/logo.svg';
   public title = 'Store';
   public links = [{
-    label: "products",
+    label: "Products",
     ulr: "/products"
   }];
 
