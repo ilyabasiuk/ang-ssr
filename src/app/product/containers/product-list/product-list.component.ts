@@ -6,7 +6,7 @@ import { Product } from '../../models/product';
 @Component({
   selector: 'app-product-list',
   template: `
-    {{products | json }}
+    <app-products [products]="products"></app-products>
   `,
   styles: []
 })
