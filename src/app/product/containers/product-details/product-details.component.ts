@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 
 import { Product } from "../../models/product";
 import { ProductService } from '../../services/product.service';
+import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-product-details',
@@ -13,9 +14,12 @@ import { ProductService } from '../../services/product.service';
 })
 export class ProductDetailsComponent implements OnInit {
   public product: Product = new Product();
-  constructor(private route: ActivatedRoute, private service: ProductService) { }
+  constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {
-    this.service.getProduct(this.route.snapshot.paramMap.get("id")).subscribe(res => this.product = res);
+    this.route.data
+      .pipe(
+        map(data => data['product'])
+      ).subscribe(res => this.product = res); 
   }
 }
