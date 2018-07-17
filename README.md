@@ -29,6 +29,11 @@ ng g s product/services/product
 
 ng g c product/components/products
 ng g c product/components/product
+
+
+ng generate universal --clientProject store
+npm install @nguniversal/module-map-ngfactory-loader @nguniversal/express-engine
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.

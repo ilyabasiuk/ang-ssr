@@ -7,7 +7,7 @@ import { Product } from '../../models/product';
     <div class="card">
       <div class="card-header">
         <h4 class="my-2">
-          <ng-container *ngIf="deatails; else link">
+          <ng-container *ngIf="details; else link">
             {{product.name}}
           </ng-container>
           <ng-template #link>
